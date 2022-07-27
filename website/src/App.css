@@ -73,9 +73,56 @@ select {
   }
 }
 
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
 #owner-img {
   background-color: beige;
   border-radius: 50%;
   width: 200px;
   height: 200px;
+}
+.nav-bar {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+h1.navName {
+  margin-left: 10px;
+  font-size: xxx-large;
+}
+div.nav-right {
+  margin: 10px;
+}
+.nav-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+.navLinks {
+  display: flex;
+  margin-right: 15px;
+}
+.navLinks li {
+  list-style: none;
+  font-size: 20px;
+  padding: 10px;
+}
+.navButton {
+  width: 150px;
+  height: 55px;
+  background-color: #75dcdf;
+  color: #ffff;
+  border: 1px solid #ffff;
+  border-radius: 15px;
 }
