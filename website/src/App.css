@@ -96,7 +96,7 @@ html {
   flex-direction: row;
   justify-content: space-between;
 }
-h1.navName {
+h1.nav-name {
   margin-left: 10px;
   font-size: xxx-large;
 }
@@ -109,16 +109,24 @@ div.nav-right {
   align-items: center;
   flex-direction: row;
 }
-.navLinks {
+@media screen and (max-width: 1000px) {
+  div.nav-links {
+    display: none;
+  }
+  .nav-button {
+    display: none;
+  }
+}
+.nav-links {
   display: flex;
   margin-right: 15px;
 }
-.navLinks li {
+.nav-links li {
   list-style: none;
   font-size: 20px;
   padding: 10px;
 }
-.navButton {
+.nav-button {
   width: 150px;
   height: 55px;
   background-color: #75dcdf;

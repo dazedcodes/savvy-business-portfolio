@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   const OWNER = {
     name: "Maya Murphy",
-    navLinks: ["Home", "Projects", "Blog", "About", "Connect"],
+    navLinks: ["Projects", "Blog", "About", "Connect"],
     personalStatement:
       "A software engineer breaking barriers through leadership, development, and design.",
     featuredExperiences: [
@@ -44,10 +44,12 @@ function App() {
         {/* NavBar Component */}
         <div>
           <nav className="nav-bar">
-            <div><h1 className="navName">{OWNER.name}</h1></div>
+            <div className="nav-left">
+              <h1 className="nav-name">{OWNER.name}</h1>
+            </div>
             <div className="nav-right">
-              <div><ul className="navLinks">{OWNER.navLinks.map(item => <li>{item}</li>)}</ul></div>
-              <div><button className="navButton">GET IN TOUCH</button></div>
+              <div className="nav-links"><ul className="nav-links">{OWNER.navLinks.map(item => <li>{item}</li>)}</ul></div>
+              <div className="nav-button"><button className="nav-button">GET IN TOUCH</button></div>
             </div>
           </nav>
         </div>
