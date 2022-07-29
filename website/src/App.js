@@ -75,10 +75,17 @@ function App() {
         </div>
        
         {/* PortfolioGreeting Component */}
-        {/* <div>
-          <div id="owner-img"></div>
-          <p>{OWNER.personalStatement}</p>
-        </div> */}
+        <div className="portfolio-greeting">
+          <div id="portfolio-greeting-img"></div>
+          <div className="portfolio-greeting-descr">
+            <p>{OWNER.personalStatement}</p>
+            <button className="portfolio-greeting-button">GET IN TOUCH</button>
+          </div>
+          
+        </div>
+        <div class="spacer layer1"></div>
+  
+        
       </header>
       <main>
         {/* FeaturedExperiences Component */}
