@@ -36,6 +36,14 @@ function App() {
     ]
   };
 
+  function collaspeMenu(){
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  }
+
   return (
     <div>
       {/* Header Component */}
@@ -44,13 +52,25 @@ function App() {
         {/* NavBar Component */}
         <div>
           <nav className="nav-bar">
-            <div className="nav-left">
-              <h1 className="nav-name">{OWNER.name}</h1>
-            </div>
-            <div className="nav-right">
-              <div className="nav-links"><ul className="nav-links">{OWNER.navLinks.map(item => <li>{item}</li>)}</ul></div>
-              <div className="nav-button"><button className="nav-button">GET IN TOUCH</button></div>
-            </div>
+              <a href="#" className="nav-branding">{OWNER.name}</a>
+              <div className="nav-right"> 
+
+                <div className="nav-links">
+                  <ul className="nav-menu">
+                    { OWNER.navLinks.map( item => 
+                      <li className="nav-item">
+                        <a href="#" className="nav-link">{item}</a>
+                      </li>
+                    )}
+                  </ul>
+                </div>
+                <button className="nav-button">GET IN TOUCH</button>
+              </div>
+              <div className="hamburger" onClick={collaspeMenu}>
+                <span className="bar"></span>
+                <span className="bar"></span>
+                <span className="bar"></span>
+              </div>
           </nav>
         </div>
        
