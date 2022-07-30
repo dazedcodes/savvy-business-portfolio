@@ -99,6 +99,8 @@ a {
   flex-direction: row;
   justify-content: space-between;
   padding: 0 20px;
+  position: relative;
+  z-index: 1;
   align-items: center;
 }
 .nav-menu {
@@ -168,19 +170,25 @@ a {
   }
   .nav-menu {
     position: fixed;
-    left: -100%;
+    background-color: azure;
     top: 70px;
+    left: -100%;
     gap: 0;
     flex-direction: column;
-    text-align: center;
+    margin: 0;
     transition: 0.3s;
+    padding: 0;
   }
   .nav-item {
-    margin: 12px 0;
+    margin: 12px;
+    width: 100%;
+    text-align: right;
   }
   .nav-link {
     color: black;
+    padding: 10px;
   }
+
   .nav-menu.active {
     left: 0;
   }
@@ -190,14 +198,7 @@ a {
 .portfolio-greeting {
   display: flex;
   position: relative;
-
   height: 400px;
-  /* background: linear-gradient(
-    360deg,
-    #b5e48c 0%,
-    #8fdbded4 0.01%,
-    #b5e48c 100%
-  ); */
   justify-content: space-evenly;
   flex-direction: row;
   align-items: center;
@@ -284,7 +285,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 0 50px;
+    margin-right: 35px;
   }
   .experience-stats {
     flex-direction: column;
