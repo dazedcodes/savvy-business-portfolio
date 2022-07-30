@@ -256,5 +256,45 @@ a {
   }
   .portfolio-greeting-descr p {
     margin-top: 5px;
+    font-size: 1.3rem;
+  }
+  .portfolio-greeting-button {
+    margin-top: 30px;
+  }
+}
+/* Experience Stats Component */
+.experience-stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.stat-number {
+  text-align: center;
+  color: #b5e48c;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.stat-descr {
+  font-size: 1.3rem;
+  text-align: center;
+}
+@media screen and (max-width: 850px) {
+  .stat-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 50px;
+  }
+  .experience-stats {
+    flex-direction: column;
+    margin-top: 100px;
+  }
+  .stat-number {
+    margin-right: 15px;
+    text-align: left;
+  }
+  .stat-descr {
+    margin: auto 0;
   }
 }

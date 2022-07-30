@@ -77,29 +77,30 @@ function App() {
        
         {/* PortfolioGreeting Component */}
         <div className="portfolio-greeting layer1 spacer">
-     
-          
-
           <div id="portfolio-greeting-img"></div>
 
           <div className="portfolio-greeting-descr">
             <p>{OWNER.personalStatement}</p>
             <button className="portfolio-greeting-button">GET IN TOUCH</button>
           </div>
-   
         </div>
-        {/* <div class="spacer layer1"></div> */}
-  
-        
       </header>
+
       <main>
+        {/* ExperienceStats Component */}
+        <div>
+          <ul className="experience-stats">{OWNER.experienceStats.map(item => 
+          
+              <li className="stat-item">
+                <div className="stat-number">{item.number}</div> 
+                <div className="stat-descr">{item.description}</div>
+              </li>
+           )}
+          </ul>
+        </div>
+
         {/* FeaturedExperiences Component */}
         {/* <div>{OWNER.featuredExperiences.map(item => <h3>{item}</h3>)}</div> */}
-
-        {/* ExperienceStats Component */}
-        {/* <div>
-          <ul>{OWNER.experienceStats.map(item => <li>{item.number} {item.description}</li>)}</ul>
-        </div> */}
 
         {/* FeaturedProjects Component */}
         {/* Project Component as list item */}
