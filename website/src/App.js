@@ -57,7 +57,8 @@ function App() {
 
                 <div className="nav-links">
                   <ul className="nav-menu">
-                    { OWNER.navLinks.map( item => 
+                    { OWNER.navLinks.map
+                    (item => 
                       <li className="nav-item">
                         <a href="#" className="nav-link">{item}</a>
                       </li>
@@ -75,15 +76,19 @@ function App() {
         </div>
        
         {/* PortfolioGreeting Component */}
-        <div className="portfolio-greeting">
+        <div className="portfolio-greeting layer1 spacer">
+     
+          
+
           <div id="portfolio-greeting-img"></div>
+
           <div className="portfolio-greeting-descr">
             <p>{OWNER.personalStatement}</p>
             <button className="portfolio-greeting-button">GET IN TOUCH</button>
           </div>
-          
+   
         </div>
-        <div class="spacer layer1"></div>
+        {/* <div class="spacer layer1"></div> */}
   
         
       </header>

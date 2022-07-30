@@ -109,6 +109,7 @@ a {
 }
 .nav-branding {
   font-size: 2rem;
+  font-weight: 500;
 }
 .nav-right {
   display: flex;
@@ -190,14 +191,14 @@ a {
   display: flex;
   position: relative;
 
-  height: 145px;
-  background: linear-gradient(
+  height: 400px;
+  /* background: linear-gradient(
     360deg,
     #b5e48c 0%,
     #8fdbded4 0.01%,
     #b5e48c 100%
-  );
-  justify-content: space-between;
+  ); */
+  justify-content: space-evenly;
   flex-direction: row;
   align-items: center;
 }
@@ -214,14 +215,14 @@ a {
 }
 
 .portfolio-greeting-descr {
-  width: 70%;
+  width: 65%;
   display: flex;
-  margin-top: 420px;
   flex-direction: column;
   align-items: center;
 }
 .portfolio-greeting-descr p {
-  font-size: 2rem;
+  font-size: 1.75rem;
+  font-weight: 300;
   width: 90%;
   text-align: center;
   padding-bottom: 30px;
@@ -240,10 +241,20 @@ a {
   background-image: url("./images/MayaProfile.jpg");
   background-position: center;
   background-size: cover;
-  margin-left: auto;
-  margin-top: 380px;
+  margin-left: 15px;
   background-color: beige;
   border-radius: 50%;
   width: 300px;
   height: 300px;
+}
+@media screen and (max-width: 900px) {
+  .portfolio-greeting {
+    flex-direction: column;
+  }
+  #portfolio-greeting-img {
+    margin: 15px;
+  }
+  .portfolio-greeting-descr p {
+    margin-top: 5px;
+  }
 }
