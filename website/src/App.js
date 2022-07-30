@@ -44,6 +44,24 @@ function App() {
     navMenu.classList.toggle("active");
   }
 
+  function runStats(e) {
+    let valueDisplays = document.querySelectorAll('.stat-number');
+    let interval = 9000; 
+
+    valueDisplays.forEach((valueDisplay) => {
+      let start = 0; 
+      let end = parseInt(valueDisplay.getAttribute("data-val"));
+      let duration = Math.floor(interval/end);
+      let counter = setInterval(function () {
+        start+=1;
+        valueDisplay.textContent = start;
+        if (start == end) {
+          clearInterval(counter);
+        }
+      }, duration);
+    });
+  }
+
   return (
     <div>
       {/* Header Component */}
@@ -59,7 +77,7 @@ function App() {
                   <ul className="nav-menu">
                     { OWNER.navLinks.map
                     (item => 
-                      <li className="nav-item">
+                      <li className="nav-item" key={item}>
                         <a href="#" className="nav-link">{item}</a>
                       </li>
                     )}
@@ -88,11 +106,10 @@ function App() {
 
       <main>
         {/* ExperienceStats Component */}
-        <div>
+        <div onScroll={runStats()}>
           <ul className="experience-stats">{OWNER.experienceStats.map(item => 
-          
-              <li className="stat-item">
-                <div className="stat-number">{item.number}</div> 
+              <li className="stat-item" key={`${item.number}`}>
+                <div className="stat-number" data-val={item.number}>{item.number}</div> 
                 <div className="stat-descr">{item.description}</div>
               </li>
            )}
